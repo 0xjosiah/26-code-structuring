@@ -1,3 +1,4 @@
+import * as THREE from 'three'
 import Experience from "./Experience"
 
 export default class Camera {
@@ -7,6 +8,12 @@ export default class Camera {
         this.scene = this.experience.scene
         this.canvas = this.experience.canvas
 
-        console.log(this);
+        this.setInstance()
+    }
+
+    setInstance() {
+        this.instance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, .1, 100)
+        this.instance.position.set(6, 4, 8)
+        this.scene.add(this.instance)
     }
 }
