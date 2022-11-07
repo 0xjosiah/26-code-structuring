@@ -2,7 +2,6 @@ import * as THREE from 'three'
 import Sizes from "./Utils/Sizes"
 import Time from "./Utils/Time"
 import Camera from './Camera'
-import { IgnorePlugin } from 'webpack'
 
 let instance = null
 
