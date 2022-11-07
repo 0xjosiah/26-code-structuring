@@ -4,6 +4,23 @@ export default class Time extends EventEmitter {
     constructor() {
         super()
 
-        console.log('time init');
+        // Setup
+        this.start = Date.now()
+        this.current = this.start
+        this.elapsed = 0
+        this.delta = 16 // screen running at 60 fps typically has ~16 milliseconds between each frame
+        
+        window.requestAnimationFrame(() => this.tick())
+    }
+
+    tick() {
+        const currentTime = Date.now()
+        this.delta = currentTime - this.current
+        this.current = currentTime
+        this.elapsed = this.current - this.start
+
+        this.trigger('tick')
+
+        window.requestAnimationFrame(() => this.tick())
     }
 }
