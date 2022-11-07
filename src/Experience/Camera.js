@@ -1,5 +1,7 @@
+import Experience from "./Experience"
+
 export default class Camera {
     constructor() {
-        console.log('camera init');
+        this.experience = new Experience()
     }
 }
