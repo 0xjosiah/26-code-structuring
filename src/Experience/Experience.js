@@ -34,9 +34,11 @@ export default class Experience {
 
     resize() {
         this.camera.resize()
+        this.renderer.resize()
     }
 
     update() {
-        this.camera.update()
+        this.camera.update() // this order matters, camera then renderer
+        this.renderer.update()
     }
 }
