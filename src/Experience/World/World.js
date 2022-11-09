@@ -19,4 +19,8 @@ export default class World {
         })
 
     }
+
+    update() {
+        if(this.fox) this.fox.update()
+    }
 }

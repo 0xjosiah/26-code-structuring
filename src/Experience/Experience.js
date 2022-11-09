@@ -44,6 +44,7 @@ export default class Experience {
 
     update() {
         this.camera.update() // this order matters, camera then renderer
+        this.world.update()
         this.renderer.update()
     }
 }
