@@ -12,12 +12,12 @@ export default [
         ]
     },
     {
-        name: 'grassColorTexture',
+        name: 'dirtColorTexture',
         type: 'texture',
         path: 'textures/dirt/color.jpg'
     },
     {
-        name: 'grassNormalTexture',
+        name: 'dirtNormalTexture',
         type: 'texture',
         path: 'textures/dirt/normal.jpg'
     }
