@@ -32,14 +32,14 @@ export default class Floor {
     }
 
     setMaterial() {
-        this.marterial = new THREE.MeshStandardMaterial({
+        this.material = new THREE.MeshStandardMaterial({
             map: this.textures.color,
             normalMap: this.textures.normal
         })
     }
 
     setMesh() {
-        this.mesh = new THREE.Mesh(this.geometry, this.marterial)
+        this.mesh = new THREE.Mesh(this.geometry, this.material)
         this.mesh.rotation.x = -Math.PI * .5
         this.mesh.receiveShadow = true
         this.scene.add(this.mesh)
