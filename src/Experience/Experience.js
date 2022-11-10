@@ -61,7 +61,7 @@ export default class Experience {
 
                 for(const key in child.material) {
                     const value = child.material[key]
-                    if(value && typeof value.dispose === 'funtion') value.dispose()
+                    if(value && typeof value.dispose === 'function') value.dispose()
                 }
             }
         })
